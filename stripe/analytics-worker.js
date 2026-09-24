@@ -33,8 +33,10 @@ const KEEP = 7 * DAY;
 // Worker. They are deliberately placeholders: a real price ID from another
 // store would charge MachEntra's customers against that store's prices.
 const PRICES = {
-  'ME-CREX6M': 'price_xxx', 'ME-DP5000': 'price_xxx',
-  'ME-TW1375G': 'price_xxx', 'ME-360SW': 'price_xxx',
+  'ME-CREX6M': 'price_1UJ2YAGd7L8SA737Py5APnlJ',
+  'ME-DP5000': 'price_1UJ2YDGd7L8SA7378jnyDQ3q',
+  'ME-TW1375G': 'price_1UJ2YGGd7L8SA7370IZvNvqh',
+  'ME-360SW': 'price_1UJ2YJGd7L8SA737G8Mm5lUZ',
 };
 
 export default {

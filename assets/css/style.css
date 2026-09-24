@@ -429,3 +429,22 @@ legend{padding:0 .5rem;font-weight:800;font-size:.86rem;letter-spacing:.08em;tex
 /* four trust points wrap to three rows on a phone; the rest are repeated
    in the hero and footer, so the bar keeps only the first there */
 @media(max-width:600px){.topbar span:not(:first-child){display:none}}
+
+/* ---- inner pages: glowing centred heads, numbered glass contents ---- */
+.pagehead{text-align:center;padding:3.6rem 0 2.6rem;
+  background:radial-gradient(700px 300px at 50% 0%,rgba(139,92,246,.26),transparent 72%)}
+.pagehead .wrap>p,.pagehead .muted{margin-inline:auto}
+.pagehead .idcard{text-align:left;max-width:680px;margin-inline:auto}
+.pagehead .eyebrow{display:inline-block;border:1px solid rgba(167,139,250,.4);border-radius:999px;padding:.3rem .85rem;background:rgba(139,92,246,.1)}
+.policy__toc{border:1px solid transparent;background:
+  linear-gradient(var(--bg-2),var(--bg-2)) padding-box,
+  linear-gradient(160deg,rgba(167,139,250,.6),rgba(46,41,66,.7) 50%) border-box}
+.policy__toc ul{counter-reset:toc}
+.policy__toc li{counter-increment:toc;display:flex;gap:.6rem;align-items:baseline}
+.policy__toc li::before{content:counter(toc);font-family:var(--head);color:#c4b5fd;font-size:.8rem;
+  min-width:1.4rem;height:1.4rem;border-radius:50%;background:rgba(139,92,246,.18);display:grid;place-items:center}
+.grid-2:has(form.form)>div:first-child{padding:1.8rem;border-radius:22px;border:1px solid transparent;background:
+  linear-gradient(var(--bg-2),var(--bg-2)) padding-box,
+  linear-gradient(160deg,rgba(167,139,250,.6),rgba(46,41,66,.7) 50%) border-box}
+.grid-2:has(form.form) .form{max-width:none}
+.summary,.checkout-panel{border:1px solid rgba(139,92,246,.45);box-shadow:0 20px 50px rgba(139,92,246,.14)}

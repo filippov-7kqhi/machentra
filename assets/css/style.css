@@ -368,3 +368,64 @@ legend{padding:0 .5rem;font-weight:800;font-size:.86rem;letter-spacing:.08em;tex
 
 .footer__grid [data-biz-addr]{display:block}
 .footer__grid [data-biz-addr][hidden]{display:none!important}
+
+/* ==== IDENTITY LAYER: MachEntra - precision, glass and light =============== */
+/* A floating pill header, a centred hero with the photograph in a glowing
+   gradient frame and a row of measurement chips under it, glass cards with
+   gradient edges, and a dot-grid texture on the bands. */
+:root{--radius:18px}
+.btn--primary{background:linear-gradient(135deg,#c4b5fd,#8b5cf6 55%,#a855f7);color:#0a0616}
+.btn--primary:hover{background:linear-gradient(135deg,#ddd6fe,#a78bfa 55%,#c084fc);box-shadow:0 10px 30px rgba(139,92,246,.4)}
+.btn--ghost{background:rgba(139,92,246,.08);border-color:rgba(167,139,250,.55);color:#c4b5fd}
+.btn--ghost:hover{background:#8b5cf6;border-color:#8b5cf6;color:#0a0616}
+.btn--ghost.is-added{background:#8b5cf6;border-color:#8b5cf6;color:#0a0616}
+
+.topbar{background:linear-gradient(90deg,#1d1535,#0c0a14 50%,#1d1535);color:#c4b5fd;border-bottom:1px solid var(--line);font-weight:600}
+/* pill header on desktop only: a backdrop-filter on the element that holds the
+   mobile menu would make that fixed menu size itself to the pill, not the screen */
+@media(min-width:901px){
+  .header{top:.8rem;margin-top:.8rem;background:transparent;border-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .header__in{background:rgba(21,18,31,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    border:1px solid rgba(139,92,246,.35);border-radius:999px;padding:.55rem .6rem .55rem 1.4rem;
+    box-shadow:0 12px 40px rgba(0,0,0,.45)}
+}
+
+.hero{padding:4.6rem 0 4.2rem;background:
+  radial-gradient(820px 440px at 50% 0%,rgba(139,92,246,.3),transparent 70%),
+  radial-gradient(620px 380px at 88% 92%,rgba(217,70,239,.14),transparent 70%),var(--bg)}
+.hero__grid{grid-template-columns:1fr;gap:2.8rem;text-align:center;justify-items:center}
+.hero p.lead{margin-inline:auto;max-width:62ch}
+.hero__cta{justify-content:center}
+.hero__pills{display:none}
+.hero .eyebrow{display:inline-block;border:1px solid rgba(167,139,250,.4);border-radius:999px;
+  padding:.35rem .9rem;background:rgba(139,92,246,.1)}
+.hero__media{width:100%;max-width:980px;padding:1px;border:0;border-radius:24px;
+  background:linear-gradient(135deg,rgba(196,181,253,.95),rgba(139,92,246,.18) 42%,rgba(217,70,239,.75));
+  box-shadow:0 30px 90px rgba(139,92,246,.28)}
+.hero__media img{border-radius:23px;width:100%;aspect-ratio:1200/640;object-fit:cover;object-position:50% 62%}
+.hero__chips{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;width:100%;max-width:980px;margin-top:-1.2rem}
+.hero__chips span{background:rgba(21,18,31,.85);border:1px solid var(--line);border-radius:14px;
+  padding:.9rem .8rem;font-size:.84rem;color:var(--ink-2)}
+.hero__chips b{display:block;font-family:var(--head);font-size:1.5rem;color:#c4b5fd;line-height:1.2}
+@media(max-width:700px){.hero__chips{grid-template-columns:repeat(2,1fr);margin-top:-1.6rem}}
+
+.card{border:1px solid transparent;background:
+  linear-gradient(var(--bg-2),var(--bg-2)) padding-box,
+  linear-gradient(160deg,rgba(167,139,250,.6),rgba(46,41,66,.7) 45%,rgba(46,41,66,.7)) border-box}
+.card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 22px 50px rgba(139,92,246,.22)}
+.card__media{margin:.6rem .6rem 0;border-radius:12px;overflow:hidden}
+.card__tag{background:rgba(12,10,20,.75);color:#c4b5fd;border:1px solid rgba(167,139,250,.5)}
+
+.band{background-color:#0f0c19;background-image:radial-gradient(rgba(139,92,246,.2) 1px,transparent 1px);background-size:22px 22px}
+.tile{background:rgba(29,26,43,.72)}
+.tile__ico{border-radius:50%;background:linear-gradient(135deg,rgba(196,181,253,.25),rgba(139,92,246,.1))}
+.step::before{background:linear-gradient(135deg,#ddd6fe,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:1}
+.cta{background:radial-gradient(640px 300px at 50% 0%,rgba(139,92,246,.38),transparent 72%),#15121f;
+  border:1px solid rgba(139,92,246,.45);border-radius:28px}
+.footer{background:#08060e}
+.priceblock{background:linear-gradient(160deg,rgba(139,92,246,.12),var(--bg-2) 60%)}
+.gallery__main{padding:1px;border:0;background:linear-gradient(135deg,rgba(196,181,253,.8),rgba(46,41,66,.8) 45%,rgba(217,70,239,.5))}
+.gallery__main img{border-radius:17px}
+/* four trust points wrap to three rows on a phone; the rest are repeated
+   in the hero and footer, so the bar keeps only the first there */
+@media(max-width:600px){.topbar span:not(:first-child){display:none}}
